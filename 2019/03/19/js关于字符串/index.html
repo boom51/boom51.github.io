@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>js关于字符串 | Boom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.string属性：length长度  prototype用于给对象添加属性或方法，所有实例共享，扩展内置对象2.获取类方法(1) charAt(index)获取index位置上的字符，若无返回null;(2)charCodeAt(index)fan’hu返回index位置上的Unicode编码；(3)fromCharCode(numX,numX,…,numX)接收Unicode值，返回对应的字">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js关于字符串">
+<meta property="og:url" content="http://yoursite.com/2019/03/19/js关于字符串/index.html">
+<meta property="og:site_name" content="Boom">
+<meta property="og:description" content="1.string属性：length长度  prototype用于给对象添加属性或方法，所有实例共享，扩展内置对象2.获取类方法(1) charAt(index)获取index位置上的字符，若无返回null;(2)charCodeAt(index)fan’hu返回index位置上的Unicode编码；(3)fromCharCode(numX,numX,…,numX)接收Unicode值，返回对应的字">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-19T07:01:52.075Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js关于字符串">
+<meta name="twitter:description" content="1.string属性：length长度  prototype用于给对象添加属性或方法，所有实例共享，扩展内置对象2.获取类方法(1) charAt(index)获取index位置上的字符，若无返回null;(2)charCodeAt(index)fan’hu返回index位置上的Unicode编码；(3)fromCharCode(numX,numX,…,numX)接收Unicode值，返回对应的字">
+  
+    <link rel="alternate" href="/atom.xml" title="Boom" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Boom</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Boom&#39;s study notes of front-end development</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js关于字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/19/js关于字符串/" class="article-date">
+  <time datetime="2019-03-19T05:52:05.000Z" itemprop="datePublished">2019-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js关于字符串
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.string属性：length长度  prototype用于给对象添加属性或方法，所有实例共享，扩展内置对象<br>2.获取类方法<br>(1) <code>charAt(index)</code>获取index位置上的字符，若无返回null;<br>(2)<code>charCodeAt(index)</code>fan’hu返回index位置上的Unicode编码；<br>(3)<code>fromCharCode(numX,numX,…,numX)</code>接收Unicode值，返回对应的字符串，<br>String.fromCharCode(97, 98, 99, 100, 101)   //返回abcde<br>3.查找类方法<br>(1)<code>indexOf()</code>,可以接收两个参数，第一个是需要查找的字符或字符串，第二个是从哪个位置开始查找；,返回-1表示没找到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;17829&quot;;</span><br><span class="line">var a=str.indexOf(&quot;w&quot;);</span><br><span class="line">console.log(a);//-1</span><br></pre></td></tr></table></figure></p>
+<p>(2)lastIndexOf()方法，表示从后往前查找；<br>(3) search()方法，接收字符串参数，或者正则表达式；<br>返回第一次找到元素的位置，若没找到返回-1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;17829W1w&quot;;</span><br><span class="line">var b=str.search(&apos;ww&apos;);</span><br><span class="line">var a=str.search(/w/i);//i表示不区分大小写</span><br><span class="line">console.log(a,b);//5 -1</span><br></pre></td></tr></table></figure></p>
+<p>(4) <code>match()</code>方法,接收字符串参数，或者正则表达式,与search方法不同的是，如果参数是子字符串或是没有进行全局匹配的正则表达式，会返回null或数组，如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;178sdf29W1w&quot;;</span><br><span class="line">var b=str.match(&apos;sdf&apos;);</span><br><span class="line">//b的输出结果[ &apos;sdf&apos;, index: 3, input: &apos;178sdf29W1w&apos;, groups: undefined ]</span><br><span class="line">var c=str.match(/f29/);</span><br><span class="line">//c的输出结果[ &apos;f29&apos;, index: 5, input: &apos;178sdf29W1w&apos;, groups: undefined ]</span><br><span class="line">var a=str.match(/123/);//a的输出结果null</span><br></pre></td></tr></table></figure></p>
+<p>如果参数传入的是具有全局匹配的正则表达式，那么match()从开始位置进行多次匹配，直到最后。如果没有匹配到结果，则返回null。否则则会返回一个数组，数组中存放所有符合要求的子字符串，并且没有index和input属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = &apos;1a2b3c4d5e&apos;;</span><br><span class="line">console.log(str.match(/h/g));   //返回null</span><br><span class="line">console.log(str.match(/\d/g));  //返回[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;]</span><br></pre></td></tr></table></figure></p>
+<p>4.截取类方法<br>(1)<code>substring(start,end)</code>,返回指定位置截取到的字符串，若无第二个参数，一直截取到最后；规定参数不可以为负值；<br>(2)<code>slice(start,end)</code>start和end可以是负值，-1表示最后一个位置；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;178sdf29W1w&quot;;</span><br><span class="line">var a=str.slice(-7,-1);//df29W1，正确，start&lt;end</span><br><span class="line">var a=str.slice(-4,-6);//错误示范</span><br><span class="line">console.log(a);</span><br></pre></td></tr></table></figure></p>
+<p>(2)<code>substr(start,length)</code>从指定位置截取多长，start为负值从尾部算起，以截取的实际长度为准；length不指定截取至尾部<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str = &apos;abcdefg&apos;;</span><br><span class="line">console.log(str.substr(1, 3))   //返回bcd</span><br><span class="line">console.log(str.substr(2))  //返回cdefg</span><br><span class="line">console.log(str.substr(-2, 4))  //返回fg，目标长度较大的话，以实际截取的长度为准</span><br></pre></td></tr></table></figure></p>
+<p>5.其他方法<br>(1) replace(regexp/substr,replacement)方法<br>如果是子字符串，或正则表达式则会替换第一次匹配到的，如果是全局正则表达式，则会替换所有的；<br>(2) split(separator,howmany)方法，切割数组<br>separator：参考切割元素，howmany返回数组最大值；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;178sdf29W1w&quot;;</span><br><span class="line">var a=str.split(&quot;s&quot;,4);//[ &apos;178&apos;, &apos;df29W1w&apos; ]</span><br></pre></td></tr></table></figure></p>
+<p>注：用split()切割会变成数组，此时数组调用join()方法再次拼接成字符串<br>(3) toLowerCase()和toUpperCase()大小写转换</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/19/js关于字符串/" data-id="cjtffkcnq0000g4uhigjmua9z" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/19/js关于正则表达式/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">js关于正则表达式</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/19/js关于字符串/">js关于字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/19/js关于正则表达式/">js关于正则表达式</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/18/javascript编程题/">js关于数组</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/18/你好/">你好</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Fanrong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
