@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>js轮播图 | Boom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这里是完整代码地址轮播图用js封装了一个动画函数,如下,element是要移动的元素，target是目标位置,结合定时器设置元素位置，注意每次调用清理定时器123456789101112131415function animate(element,target)&amp;#123;        clearInterval(element.timeId);//清理定时器        element.ti">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js轮播图">
+<meta property="og:url" content="http://yoursite.com/2019/03/21/js轮播图/index.html">
+<meta property="og:site_name" content="Boom">
+<meta property="og:description" content="这里是完整代码地址轮播图用js封装了一个动画函数,如下,element是要移动的元素，target是目标位置,结合定时器设置元素位置，注意每次调用清理定时器123456789101112131415function animate(element,target)&amp;#123;        clearInterval(element.timeId);//清理定时器        element.ti">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-21T11:43:59.626Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js轮播图">
+<meta name="twitter:description" content="这里是完整代码地址轮播图用js封装了一个动画函数,如下,element是要移动的元素，target是目标位置,结合定时器设置元素位置，注意每次调用清理定时器123456789101112131415function animate(element,target)&amp;#123;        clearInterval(element.timeId);//清理定时器        element.ti">
+  
+    <link rel="alternate" href="/atom.xml" title="Boom" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Boom</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Boom&#39;s study notes of front-end development</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js轮播图" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/21/js轮播图/" class="article-date">
+  <time datetime="2019-03-21T10:39:03.000Z" itemprop="datePublished">2019-03-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js轮播图
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这里是完整代码地址<a href="https://github.com/boom51/lunbotu" target="_blank" rel="noopener">轮播图</a><br>用js封装了一个动画函数,如下,element是要移动的元素，target是目标位置,结合定时器设置元素位置，注意每次调用清理定时器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function animate(element,target)&#123;</span><br><span class="line">        clearInterval(element.timeId);//清理定时器</span><br><span class="line">        element.timeId=setInterval(function()&#123;</span><br><span class="line">            var current=element.offsetLeft;</span><br><span class="line">            var step=9;</span><br><span class="line">            step=current&lt;target?step:-step;</span><br><span class="line">            current+=step;</span><br><span class="line">            if(Math.abs(target-current)&gt;Math.abs(step))&#123;</span><br><span class="line">                element.style.left=current+&quot;px&quot;;</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">               clearInterval(element.timeId);//清理定时器</span><br><span class="line">                element.style.left=target+&quot;px&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            &#125;,10);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>页面框架<br>通过动画函数，移动装了img的盒子lb来实现do<br>lr盒子放置的是向左向右的按钮<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&quot;container&quot;&gt;</span><br><span class="line">        &lt;div id=&quot;lb&quot;&gt;</span><br><span class="line">            &lt;img src=&quot;xs1.PNG&quot; alt=&quot;&quot;&gt;</span><br><span class="line">            &lt;img src=&quot;xs2.PNG&quot; alt=&quot;&quot;&gt;</span><br><span class="line">            &lt;img src=&quot;xs3.PNG&quot; alt=&quot;&quot;&gt;</span><br><span class="line">            &lt;img src=&quot;xs4.PNG&quot; alt=&quot;&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div id=&quot;buttons&quot;&gt;</span><br><span class="line">            &lt;span&gt;1&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;2&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;3&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;4&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div id=&quot;lr&quot;&gt;</span><br><span class="line">              &lt;a id=&quot;left&quot;&gt;&amp;lt;&lt;/a&gt;</span><br><span class="line">              &lt;a id=&quot;right&quot;&gt;&amp;gt;&lt;/a&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">       &lt;/div&gt;</span><br><span class="line">       &lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<p>以下是操作元素的js方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        var box=document.getElementById(&quot;container&quot;);</span><br><span class="line">       var spanObj=box.children[1].children;</span><br><span class="line">       var width=box.offsetWidth;</span><br><span class="line">       var inner=box.children[0];</span><br><span class="line">       var left=document.getElementById(&quot;left&quot;);</span><br><span class="line">       var right=document.getElementById(&quot;right&quot;);</span><br><span class="line">       var lr=document.getElementById(&quot;lr&quot;);</span><br><span class="line">      box.onmouseover=function()&#123;   //鼠标在像框里面时显示</span><br><span class="line">           lr.style.display=&quot;block&quot;;</span><br><span class="line">       &#125;</span><br><span class="line">       box.onmouseout=function()&#123;  //不在时隐藏</span><br><span class="line">           lr.style.display=&quot;none&quot;;</span><br><span class="line">       &#125;</span><br><span class="line">       var index=0;</span><br><span class="line">       left.onclick=function()&#123;</span><br><span class="line">           if(index&gt;0)&#123;</span><br><span class="line">               index--;</span><br><span class="line">               animate(inner,-index*width);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       right.onclick=function()&#123;</span><br><span class="line">           if(index&lt;3)&#123;</span><br><span class="line">               index++;</span><br><span class="line">               animate(inner,-index*width);</span><br><span class="line">           &#125;</span><br><span class="line">           &#125;;</span><br><span class="line">   for(var i=0;i&lt;spanObj.length;i++)&#123;</span><br><span class="line">       spanObj[i].setAttribute(&quot;index&quot;,i);</span><br><span class="line">       spanObj[i].onmouseover=function()&#123;</span><br><span class="line">           var index=this.getAttribute(&quot;index&quot;);</span><br><span class="line">           animate(inner,-index*width);</span><br><span class="line">       &#125;;</span><br><span class="line">   &#125;</span><br><span class="line">  </span><br><span class="line">   &lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/21/js轮播图/" data-id="cjtildu9o0006iwuhgoyfq98d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/03/21/js继承/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          js继承
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/21/Vue组件传值/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue组件传值</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/21/js继承/">js继承</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/21/js轮播图/">js轮播图</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/21/Vue组件传值/">Vue组件传值</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/21/Vue指令/">Vue指令</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/20/es6学习笔记之promise/">es6学习笔记之promise</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Fanrong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
